@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guidelines - QuickSell</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            margin-top: 128px;
+            background-color: #181818;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #C78AFF;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("includes/header-lo.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>Community Guidelines</h1>
+        <p>To ensure a positive experience for everyone on QuickSell, please adhere to the following guidelines:</p>
+
+        <h2>Respectful Communication</h2>
+        <ul>
+            <li>Treat all users with respect and courtesy.</li>
+            <li>Avoid offensive language, harassment, or discrimination.</li>
+        </ul>
+
+        <h2>Accurate Listings</h2>
+        <ul>
+            <li>Provide accurate descriptions and photos of items for sale.</li>
+            <li>Disclose any defects or issues with the item.</li>
+        </ul>
+
+        <h2>Fair Pricing</h2>
+        <ul>
+            <li>Set reasonable prices for your items.</li>
+            <li>Be open to negotiation, but avoid price gouging.</li>
+        </ul>
+
+        <h2>Dispute Resolution</h2>
+        <ul>
+            <li>Attempt to resolve disputes amicably with the other party.</li>
+            <li>If a resolution cannot be reached, contact QuickSell support for assistance.</li>
+        </ul>
+    </div>
+</body>
+</html>

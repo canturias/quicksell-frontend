@@ -1,0 +1,86 @@
+<head>
+  <meta name="viewport" content="width=, initial-scale=1.0">
+</head>
+
+<style>
+  @font-face {
+    font-family: Lexend;
+    src: url(../components/Lexend-VariableFont_wght.ttf);
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+    font-family: Lexend;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .quicksell-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .quicksell-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .quicksell25px {
+    width: 25px;
+    height: auto;
+  }
+
+  .unlock {
+    width: 16px;
+    height: auto;
+  }
+
+  .quicksell-text {
+    font-weight: 700;
+    font-size: 24px;
+    background: radial-gradient(circle at center,
+        rgb(247, 242, 255),
+        rgba(224, 203, 253, 0.8));
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 12px rgba(252, 88, 255, 0.3);
+  }
+
+  a {
+    color: #CCCCCC;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #CCCCCC;
+    text-decoration: none;
+  }
+</style>
+
+<header>
+  <section class="quicksell-logo">
+    <a href="../index.html">
+      <div class="quicksell-container">
+        <img class="quicksell25px" src="../components/quicksell25.png">
+        <span class="quicksell-text">uickSell</span>
+      </div>
+    </a>
+    <img class="unlock" src="../components/unlock.png">
+  </section>
+  <section class="theme">
+    <img class="quicksell25px" src="../components/theme.png">
+  </section>
+</header>

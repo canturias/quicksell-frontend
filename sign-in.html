@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/sign-in.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>QuickSell - Sign In</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch("includes/header-ul.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <div class="sign-in-container">
+      <img class="image32px" src="/components/user.png">
+      <h3 class="sign-in-title">Sign in</h3>
+
+      <!-- Credentials -->
+
+      <div class="field-container">
+        <label>Username</label>
+        <input type="text" placeholder="chris123">
+      </div>
+      <div class="field-container">
+        <label>Password</label>
+        <input type="password" placeholder="********">
+      </div>
+
+
+      <div class="container">
+        <a class="sign-in-button" href="home.html">Sign in</a>
+        <!-- <input class="sign-in-button" type="submit" name="sign-up" value="Sign up"> -->
+      </div>
+
+    </div>
+    <a class="sign-in" href="sign-up.html">Create an account</a>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("includes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

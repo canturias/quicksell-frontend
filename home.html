@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>QuickSell - Home</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch("includes/header-lo.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+  <div id="nav"></div>
+  <script>
+    fetch("includes/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      });
+  </script>
+  <main>
+    <h2 class="recent-listings-title">Recent Listings</h2>
+    <section class="recent-listings">
+      
+      <!-- Listing 1 -->
+      <div class="listing">
+        <div class="listing-header">
+          <img class="profile-pic" src="components/jerome.png" alt="Profile Picture">
+          <div class="listing-info">
+            <span class="seller-name">Jerome Paig</span>
+            <span class="time-posted">16 hours ago</span>
+          </div>
+        </div>
+        <img class="listing-image" src="components/example iphone 7.png" alt="Apple iPhone 7">
+        <div class="listing-details">
+          <span class="details">
+            <span class="price">₱2,999</span>
+            <span class="condition heavily-used">Heavily Used</span>
+          </span>
+          <h3 class="item-title">Apple iPhone 7 (128GB)</h3>
+          <span class="category">📱 Phones & Accessories</span>
+        </div>
+      </div>
+  
+      <!-- Listing 2 -->
+      <div class="listing">
+        <div class="listing-header">
+          <img class="profile-pic" src="components/darryl.png" alt="Profile Picture">
+          <div class="listing-info">
+            <span class="seller-name">Darryl Adrian Guido</span>
+            <span class="time-posted">2 days ago</span>
+          </div>
+        </div>
+        <img class="listing-image" src="components/example pc set.png" alt="PC Set">
+        <div class="listing-details">
+          <span class="details">
+            <span class="price">₱24,999</span>
+            <span class="condition well-used">Well Used</span>
+          </span>
+          <h3 class="item-title">PC Set (i3-12100F + RTX 3060)</h3>
+          <span class="category">💻 Computers & Laptops</span>
+        </div>
+      </div>
+  
+      <p class="end-message">😎 That’s all for today.</p>
+    </section>
+  </main>
+</body>
+</html>

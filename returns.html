@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Refunds - QuickSell</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            margin-top: 128px;
+            background-color: #181818;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #C78AFF;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("includes/header-lo.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>Returns & Refunds</h1>
+        <p>This policy outlines the guidelines for returns and refunds on QuickSell:</p>
+
+        <h2>Dispute Resolution</h2>
+        <ul>
+            <li>Buyers and sellers are encouraged to communicate directly to resolve any issues.</li>
+            <li>If a resolution cannot be reached, contact QuickSell support for assistance.</li>
+        </ul>
+
+        <h2>Conditions for Refunds</h2>
+        <ul>
+            <li>Item is significantly different from the description.</li>
+            <li>Item is damaged or defective.</li>
+        </ul>
+
+        <h2>Return Process</h2>
+        <ul>
+            <li>Contact the seller to request a return.</li>
+            <li>If the seller agrees, arrange for the item to be returned.</li>
+            <li>Once the item is received, the refund will be processed.</li>
+        </ul>
+    </div>
+</body>
+</html>

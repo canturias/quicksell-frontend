@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - QuickSell</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            margin-top: 128px;
+            background-color: #181818;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #C78AFF;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("includes/header-lo.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>Terms of Use</h1>
+        <p>By using QuickSell, you agree to these terms and conditions.</p>
+        <p>You are responsible for your activity on the platform and must comply with all applicable laws.</p>
+        <p>We reserve the right to modify these terms at any time. Your continued use of QuickSell constitutes acceptance of the revised terms.</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/tags.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>QuickSell - Tags</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch("includes/header-lo.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <h2 class="tags-title">Categories (Tags)</h2>
+    <section class="tags-grid">
+      <div class="tag-item">
+        <span>📺</span>
+        <span>Electronics</span>
+      </div>
+      <div class="tag-item">
+        <span>📱</span>
+        <span>Phones & Accessories</span>
+      </div>
+      <div class="tag-item">
+        <span>💻</span>
+        <span>Computers & Laptops</span>
+      </div>
+      <div class="tag-item">
+        <span>🏠</span>
+        <span>Home Applications</span>
+      </div>
+      <div class="tag-item">
+        <span>📦</span>
+        <span>Furniture</span>
+      </div>
+      <div class="tag-item">
+        <span>👕</span>
+        <span>Clothing & Apparel</span>
+      </div>
+      <div class="tag-item">
+        <span>👟</span>
+        <span>Footwear</span>
+      </div>
+      <div class="tag-item">
+        <span>💄</span>
+        <span>Beauty & Personal Care</span>
+      </div>
+      <div class="tag-item">
+        <span>📚</span>
+        <span>Books & Stationary</span>
+      </div>
+      <div class="tag-item">
+        <span>🧸</span>
+        <span>Toys & Games</span>
+      </div>
+      <div class="tag-item">
+        <span>⚽</span>
+        <span>Sports & Fitness</span>
+      </div>
+      <div class="tag-item">
+        <span>🚗</span>
+        <span>Vehicles</span>
+      </div>
+      <div class="tag-item">
+        <span>🔧</span>
+        <span>Auto Parts & Accessories</span>
+      </div>
+      <div class="tag-item">
+        <span>🐾</span>
+        <span>Pet Supplies</span>
+      </div>
+      <div class="tag-item">
+        <span>🎸</span>
+        <span>Musical Instruments</span>
+      </div>
+      <div class="tag-item">
+        <span>🛠️</span>
+        <span>Tools & Hardware</span>
+      </div>
+      <div class="tag-item">
+        <span>🌱</span>
+        <span>Garden & Outdoor</span>
+      </div>
+      <div class="tag-item">
+        <span>🎨</span>
+        <span>Arts & Crafts</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="nav"></div>
+  <script>
+    fetch("includes/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/reg-success.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>QuickSell - Sign Up</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch("includes/header-ul.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <div class="sign-up-container">
+      <div class="container">
+        <img class="image128px" src="components/check-circle.png" alt="">
+      </div>
+
+      <h3 class="sign-up-title">Registration Successful!</h3>
+
+      <div class="container">
+        <a href="sign-in.html" class="sign-in-button">Sign in</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("includes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    const cityToBarangayMap = {
+      Dapitan: [
+        "Aliguay",
+        "Antipolo",
+        "Aseniero"
+      ],
+      Dipolog: [
+        "Central",
+        "Minaog",
+        "Sicayab"
+      ]
+    };
+
+    const citySelect = document.getElementById('city');
+    const barangaySelect = document.getElementById('barangay');
+
+    function updateBarangayOptions() {
+      const selectedCity = citySelect.value;
+
+      barangaySelect.innerHTML = '<option value="">Select</option>';
+
+      if (selectedCity && cityToBarangayMap[selectedCity]) {
+        const barangays = cityToBarangayMap[selectedCity];
+
+        barangays.forEach(function(barangay) {
+          const option = document.createElement('option');
+          option.value = barangay;
+          option.textContent = barangay;
+          barangaySelect.appendChild(option);
+        });
+      }
+    }
+
+    // Event listener to update Barangay options when a city is selected
+    citySelect.addEventListener('change', updateBarangayOptions);
+
+    // Call the function once to initialize the Barangay options based on the default city
+    updateBarangayOptions();
+  </script>
+</body>
+</html>

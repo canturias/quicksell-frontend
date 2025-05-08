@@ -1,0 +1,186 @@
+body {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+main {
+  width: 100%;
+  padding: 0 24px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recent-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recent-listings-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.listing {
+  background-color: #181818;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.listing-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.listing-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.time-posted {
+  font-size: 12px;
+  color: #CCCCCC;
+}
+
+.listing-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.listing-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.condition {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(to right, #D33645, #7C0E35); /* Default gradient */
+}
+
+.heavily-used {
+  background: linear-gradient(to right, #D33645, #7C0E35);
+}
+
+.well-used {
+  background: linear-gradient(to right, #D99D1B, #D7D713);
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.category {
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+.end-message {
+  text-align: center;
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #181818;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #333;
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #CCCCCC;
+  font-size: 12px;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.nav-item:hover {
+  color: #FFFFFF;
+}
+
+.nav-item.active {
+  color: #C78AFF;
+}
+
+@media (min-width: 768px) {
+  .recent-listings {
+    gap: 32px;
+  }
+
+  .listing {
+    padding: 24px;
+  }
+
+  .recent-listings-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 320px) {
+  .recent-listings {
+    grid-template-columns: 1fr;
+  }
+
+  .listing {
+    padding: 16px;
+  }
+}

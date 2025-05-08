@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/sign-up.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <title>QuickSell - Sign Up</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch("includes/header-ul.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+
+  <main>
+    <div class="sign-up-container">
+      <img class="image32px" src="/components/user-plus.png">
+      <h3 class="sign-up-title">Sign up</h3>
+
+      <!-- Names -->
+      <div class="container">
+        <div class="field-container">
+          <label>First name</label>
+          <input type="text" placeholder="Chris">
+        </div>
+        <div class="field-container">
+          <label>Last name</label>
+          <input type="text" placeholder="Can't">
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="container">
+        <div class="field-container">
+          <label>City</label>
+          <select name="city" id="city" required>
+            <option value="" disabled selected>Select ▼</option>
+            <option value="Dapitan">Dapitan</option>
+            <option value="Dipolog">Dipolog</option>
+          </select>
+        </div>
+        
+        <div class="field-container">
+          <label>Barangay</label>
+          <select name="barangay" id="barangay" required>
+          </select>
+        </div>
+      </div>
+
+      <!-- Birthdate -->
+      <div class="container">
+        <div class="field-container">
+          <label>Birthdate</label>
+          <input type="date" value="2000-12-25">
+        </div>
+      </div>
+
+      <!-- Credentials -->
+      <div class="container">
+        <div class="field-container">
+          <label>Username</label>
+          <input type="text" placeholder="chris123">
+        </div>
+        <div class="field-container">
+          <label>Password</label>
+          <input type="password" placeholder="********">
+        </div>
+      </div>
+
+      <div class="container">
+        <a class="sign-up-button" href="reg-success.html">Sign up</a>
+        <!-- <input class="sign-up-button" type="submit" name="sign-up" value="Sign up"> -->
+      </div>
+
+    </div>
+    <a class="sign-in" href="sign-in.html">Have an account? Sign in</a>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("includes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    const cityToBarangayMap = {
+      Dapitan: [
+        "Aliguay",
+        "Antipolo",
+        "Aseniero"
+      ],
+      Dipolog: [
+        "Central",
+        "Minaog",
+        "Sicayab"
+      ]
+    };
+
+    const citySelect = document.getElementById('city');
+    const barangaySelect = document.getElementById('barangay');
+
+    function updateBarangayOptions() {
+      const selectedCity = citySelect.value;
+
+      barangaySelect.innerHTML = '<option value="" disabled>Select ▼</option>';
+
+      if (selectedCity && cityToBarangayMap[selectedCity]) {
+        const barangays = cityToBarangayMap[selectedCity];
+
+        barangays.forEach(function(barangay) {
+          const option = document.createElement('option');
+          option.value = barangay;
+          option.textContent = barangay;
+          barangaySelect.appendChild(option);
+        });
+      }
+    }
+
+    citySelect.addEventListener('change', updateBarangayOptions);
+
+    
+    updateBarangayOptions();
+  </script>
+</body>
+</html>

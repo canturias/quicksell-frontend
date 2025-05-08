@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Delivery - QuickSell</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            margin-top: 128px;
+            background-color: #181818;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #C78AFF;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("includes/header-lo.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>Shipping & Delivery</h1>
+        <p>While QuickSell primarily focuses on local transactions, some users may choose to offer or request shipping. Here are some guidelines:</p>
+
+        <h2>Local Delivery Options</h2>
+        <ul>
+            <li>Arrange a meeting point for exchange.</li>
+            <li>Consider using local courier services.</li>
+        </ul>
+
+        <h2>Recommended Services</h2>
+        <ul>
+            <li>Research reputable shipping companies in your area.</li>
+            <li>Compare prices and services before choosing a provider.</li>
+        </ul>
+
+        <h2>Safe Packaging</h2>
+        <ul>
+            <li>Use appropriate packaging materials to protect the item during transit.</li>
+            <li>Include tracking and insurance for valuable items.</li>
+        </ul>
+    </div>
+</body>
+</html>
